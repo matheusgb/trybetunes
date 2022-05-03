@@ -49,8 +49,8 @@ class Album extends React.Component {
         <Header />
         {musicObj
           .filter((el) => (el.kind !== 'song' && el))
-          .map((el, i) => (
-            <div key={ i }>
+          .map((el) => (
+            <div key={ el.artworkUrl100 }>
               <img src={ el.artworkUrl100 } alt={ el.collectionName } />
               <p data-testid="artist-name">{el.artistName}</p>
               <p data-testid="album-name">{el.collectionName}</p>
@@ -62,7 +62,7 @@ class Album extends React.Component {
           .filter((el) => (el.kind === 'song' && el))
           .map((el) => (
             <MusicCard
-              key={ el.Id }
+              key={ el.trackName }
               musicObj={ musicObj }
               trackName={ el.trackName }
               trackId={ el.trackId }

@@ -22,6 +22,7 @@ class MusicCard extends React.Component {
       loading: true,
     });
     const favoritos = await getFavoriteSongs();
+    console.log(favoritos);
     const checked = favoritos.some((el) => el.trackId === trackId);
     this.setState({ check: checked });
     this.setState({
@@ -50,6 +51,7 @@ class MusicCard extends React.Component {
         check: false,
       });
     }
+    this.songs();
   }
 
   render() {
@@ -58,30 +60,32 @@ class MusicCard extends React.Component {
 
     return (
       <div>
-        {loading && <p>Carregando...</p>}
-        <div key={ trackName } className="tudo">
-          <p>{trackName}</p>
-          <audio data-testid="audio-component" src={ previewUrl } controls>
-            <track kind="captions" />
-            O seu navegador não suporta o elemento
-            {' '}
-            <code>audio</code>
-            .
-          </audio>
-          <label htmlFor={ trackId }>
-            Favorita
+        {loading ? <p>Carregando...</p>
+          : (
+            <div key={ trackName } className="tudo">
+              <p>{trackName}</p>
+              <audio data-testid="audio-component" src={ previewUrl } controls>
+                <track kind="captions" />
+                O seu navegador não suporta o elemento
+                {' '}
+                <code>audio</code>
+                .
+              </audio>
+              <label htmlFor={ trackId }>
+                Favorita
 
-            <input
-              type="checkbox"
-              className={ trackId }
-              id={ trackId }
-              name={ previewUrl }
-              data-testid={ `checkbox-music-${trackId}` }
-              onChange={ this.handleChanger }
-              checked={ check }
-            />
-          </label>
-        </div>
+                <input
+                  type="checkbox"
+                  className={ trackId }
+                  id={ trackId }
+                  name={ previewUrl }
+                  data-testid={ `checkbox-music-${trackId}` }
+                  onChange={ this.handleChanger }
+                  checked={ check }
+                />
+              </label>
+            </div>
+          )}
 
       </div>
     );
