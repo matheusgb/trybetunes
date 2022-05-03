@@ -22,7 +22,6 @@ class MusicCard extends React.Component {
       loading: true,
     });
     const favoritos = await getFavoriteSongs();
-    console.log(favoritos);
     const checked = favoritos.some((el) => el.trackId === trackId);
     this.setState({ check: checked });
     this.setState({
