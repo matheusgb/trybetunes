@@ -22,13 +22,11 @@ class User extends React.Component {
     });
 
     const api = await getUser();
-    console.log(api.image);
 
     this.setState({
       loading: false,
       user: api,
     });
-    console.log(api);
   }
 
   handleClick = () => {
