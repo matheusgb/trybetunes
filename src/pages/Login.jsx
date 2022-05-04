@@ -39,7 +39,12 @@ class Login extends React.Component {
       loading: true,
     });
 
-    const userCreate = await createUser({ name: input });
+    const userCreate = await createUser({
+      name: input,
+      email: 'usuario@usuario.com.br',
+      image: 'https://img.icons8.com/ios-glyphs/452/user--v1.png',
+      description: 'Insira uma descrição',
+    });
 
     this.setState({
       loading: false,
