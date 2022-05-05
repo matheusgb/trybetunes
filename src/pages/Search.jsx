@@ -65,47 +65,58 @@ class Search extends React.Component {
     return (
       <div data-testid="page-search">
         <Header />
-        <label htmlFor="artista">
-          Nome do artista:
-          <input
-            type="text"
-            id="artista"
-            data-testid="search-artist-input"
-            value={ input }
-            onChange={ this.handleChanger }
-          />
-        </label>
-        <button
-          type="button"
-          data-testid="search-artist-button"
-          disabled={ disable }
-          onClick={ this.pesquisa }
-        >
-          Pesquisar
-        </button>
-        {click === true && (
-          <p>
-            Resultado de álbuns de:
+        <div className="search">
+          <label htmlFor="artista">
+            Nome do artista:
             {' '}
-            {prevInput}
-          </p>)}
+            <input
+              type="text"
+              id="artista"
+              data-testid="search-artist-input"
+              value={ input }
+              onChange={ this.handleChanger }
+            />
+          </label>
+          <button
+            type="button"
+            data-testid="search-artist-button"
+            disabled={ disable }
+            onClick={ this.pesquisa }
+          >
+            Pesquisar
+          </button>
+        </div>
 
-        {api
-          .map((el) => (
-            <Link
-              key={ el.collectionId }
-              to={ `/album/${el.collectionId}` }
-              data-testid={ `link-to-album-${el.collectionId}` }
-            >
-              <div>
-                <img src={ el.artworkUrl100 } alt={ el.collectionName } />
-                <p>{el.collectionName}</p>
-                <p>{el.artistName}</p>
+        <div className="result">
+          {click === true && (
+            <p>
+              Resultado de álbuns de:
+              {' '}
+              {prevInput}
+            </p>)}
+        </div>
+
+        <div className="musics">
+          {api
+            .map((el) => (
+              <div key={ el.collectionId } className="card">
+                <Link
+                  style={ { textDecoration: 'none',
+                    color: 'inherit' } }
+                  to={ `/album/${el.collectionId}` }
+                  data-testid={ `link-to-album-${el.collectionId}` }
+                >
+                  <div>
+                    <img src={ el.artworkUrl100 } alt={ el.collectionName } />
+                    <p className="info">{el.collectionName}</p>
+                    <p className="info">{el.artistName}</p>
+                  </div>
+                </Link>
               </div>
-            </Link>
-          ))}
+            ))}
 
-        {click === true && api.length === 0 && <p> Nenhum álbum foi encontrado </p>}
+          {click === true && api.length === 0 && <p> Nenhum álbum foi encontrado </p>}
+        </div>
       </div>
     );
   }

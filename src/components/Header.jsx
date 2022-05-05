@@ -34,6 +34,38 @@ class Header extends React.Component {
     if (loading === true) {
       return (
         <header data-testid="header-component">
+
+          <div className="title">
+            <p>TrybeTunes</p>
+            <p>Carregando...</p>
+          </div>
+
+          <div className="menu">
+            <Link to="/search">
+              <button type="button" data-testid="link-to-search"> Pesquisa </button>
+            </Link>
+
+            <Link to="/favorites">
+              <button type="button" data-testid="link-to-favorites"> Favoritos </button>
+            </Link>
+
+            <Link to="/profile">
+              <button type="button" data-testid="link-to-profile"> Perfil </button>
+            </Link>
+          </div>
+        </header>
+      );
+    }
+
+    return (
+      <header data-testid="header-component">
+        <div className="title">
+          <p>TrybeTunes</p>
+
+          <p data-testid="header-user-name">{result}</p>
+        </div>
+
+        <div className="menu">
           <Link to="/search">
             <button type="button" data-testid="link-to-search"> Pesquisa </button>
           </Link>
@@ -45,26 +77,8 @@ class Header extends React.Component {
           <Link to="/profile">
             <button type="button" data-testid="link-to-profile"> Perfil </button>
           </Link>
-          <p>Carregando...</p>
-        </header>
-      );
-    }
+        </div>
 
-    return (
-      <header data-testid="header-component">
-        <Link to="/search">
-          <button type="button" data-testid="link-to-search"> Pesquisa </button>
-        </Link>
-
-        <Link to="/favorites">
-          <button type="button" data-testid="link-to-favorites"> Favoritos </button>
-        </Link>
-
-        <Link to="/profile">
-          <button type="button" data-testid="link-to-profile"> Perfil </button>
-        </Link>
-
-        <p data-testid="header-user-name">{result}</p>
       </header>
     );
   }
