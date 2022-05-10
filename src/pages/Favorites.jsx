@@ -42,11 +42,10 @@ class Favorites extends React.Component {
 
   render() {
     const { favorites, loading } = this.state;
-    console.log(loading);
     return (
       <div data-testid="page-favorites">
         <Header />
-        {loading ? <p>Carregando...</p>
+        {loading ? <p className="loading">Carregando...</p>
           : (
             favorites
               .map((el) => (
