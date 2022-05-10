@@ -24,7 +24,7 @@ class Header extends React.Component {
 
     this.setState({
       loading: false,
-      result: api.name,
+      result: api,
     });
   }
 
@@ -36,8 +36,8 @@ class Header extends React.Component {
         <header data-testid="header-component">
 
           <div className="title">
-            <p>TrybeTunes</p>
-            <p>Carregando...</p>
+            <img src="https://i.ibb.co/5hsmHKp/Group-1-1.png" alt="logo" />
+            <p className="loading">Carregando...</p>
           </div>
 
           <div className="menu">
@@ -60,9 +60,12 @@ class Header extends React.Component {
     return (
       <header data-testid="header-component">
         <div className="title">
-          <p>TrybeTunes</p>
+          <img src="https://i.ibb.co/5hsmHKp/Group-1-1.png" alt="logo" />
 
-          <p data-testid="header-user-name">{result}</p>
+          <div className="user">
+            <p data-testid="header-user-name">{result.name}</p>
+            <img src={ result.image } alt="foto de perfil" />
+          </div>
         </div>
 
         <div className="menu">
