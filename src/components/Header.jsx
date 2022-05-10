@@ -41,17 +41,23 @@ class Header extends React.Component {
           </div>
 
           <div className="menu">
-            <Link to="/search">
-              <button type="button" data-testid="link-to-search"> Pesquisa </button>
-            </Link>
+            <div className="botao">
+              <Link to="/search">
+                <button type="button" data-testid="link-to-search"> Pesquisa </button>
+              </Link>
+            </div>
 
-            <Link to="/favorites">
-              <button type="button" data-testid="link-to-favorites"> Favoritos </button>
-            </Link>
+            <div className="botao">
+              <Link to="/favorites">
+                <button type="button" data-testid="link-to-favorites"> Favoritos </button>
+              </Link>
+            </div>
 
-            <Link to="/profile">
-              <button type="button" data-testid="link-to-profile"> Perfil </button>
-            </Link>
+            <div className="botao">
+              <Link to="/profile">
+                <button type="button" data-testid="link-to-profile"> Perfil </button>
+              </Link>
+            </div>
           </div>
         </header>
       );
@@ -69,17 +75,23 @@ class Header extends React.Component {
         </div>
 
         <div className="menu">
-          <Link to="/search">
-            <button type="button" data-testid="link-to-search"> Pesquisa </button>
-          </Link>
+          <div className="botao">
+            <Link to="/search">
+              <button type="button" data-testid="link-to-search"> Pesquisa </button>
+            </Link>
+          </div>
 
-          <Link to="/favorites">
-            <button type="button" data-testid="link-to-favorites"> Favoritos </button>
-          </Link>
+          <div className="botao">
+            <Link to="/favorites">
+              <button type="button" data-testid="link-to-favorites"> Favoritos </button>
+            </Link>
+          </div>
 
-          <Link to="/profile">
-            <button type="button" data-testid="link-to-profile"> Perfil </button>
-          </Link>
+          <div className="botao">
+            <Link to="/profile">
+              <button type="button" data-testid="link-to-profile"> Perfil </button>
+            </Link>
+          </div>
         </div>
 
       </header>
