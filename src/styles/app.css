@@ -175,6 +175,12 @@ html {
   margin-top: 5px;
 }
 
+.result p {
+  margin: 15px 0;
+  font-size: 20px;
+  font-family: 'Epilogue';
+}
+
 .musics {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -189,8 +195,8 @@ html {
 }
 
 .card {
-  width: 180px;
-  height: 310px;
+  width: 290px;
+  height: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,20 +210,46 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: 5px;
-  margin-top: 5px;
-  background-color: lightgrey;
-  border-radius: 15px;
+  margin-left: 10px;
+  border-radius: 3px;
+  margin-top: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.card img {
-  width: 160px;
+.card div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.card p {
-  width: 160px;
+.card div img {
+  width: 170px;
+}
+
+.card div p {
+  width: 270px;
   text-align: center;
-  margin-top: 5px;
+  margin-top: 10px;
+  font-family: 'Epilogue';
+  height: 30px;
+}
+
+.card div p:last-child {
+  margin-top: 30px;
+  border-top: #d1d4d3 solid 1px;
+  padding-top: 5px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .page {

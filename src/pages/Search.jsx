@@ -57,6 +57,8 @@ class Search extends React.Component {
   render() {
     const { disable, input, loading, click, api, prevInput } = this.state;
 
+    console.log(api);
+
     if (loading === true) {
       return (
         <>
