@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
 
@@ -48,6 +50,7 @@ class Search extends React.Component {
       loading: false,
       api: albums,
       click: true,
+      disable: true,
     });
   }
 
@@ -58,7 +61,7 @@ class Search extends React.Component {
       return (
         <>
           <Header />
-          <p>Carregando...</p>
+          <p className="loading">Carregando...</p>
         </>
       );
     }
@@ -67,10 +70,10 @@ class Search extends React.Component {
         <Header />
         <div className="search">
           <label htmlFor="artista">
-            Nome do artista:
-            {' '}
+            <FontAwesomeIcon className="icon" icon={ faMagnifyingGlass } />
             <input
               type="text"
+              placeholder="Nome do artista"
               id="artista"
               data-testid="search-artist-input"
               value={ input }
