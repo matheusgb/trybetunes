@@ -47,18 +47,33 @@ html {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   background-color: white;
-  padding: 0 17px;
+  padding: 0 15px;
   border-radius: 50px;
   font-family: 'Epilogue';
 }
 
-.user img {
-  width: 25px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+.user div {
+  width: 35px;
+  height: 35px;
   margin-right: 10px;
-  margin-bottom: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user div img {
+  height: 35px;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .loading {
@@ -95,7 +110,7 @@ html {
 .botao {
   border-left: 1px solid grey;
   border-right: 1px solid grey;
-  border-bottom: 4px solid #56bf9a;
+  border-bottom: 3px solid #56bf9a;
   width: 100%;
 }
 

@@ -70,7 +70,9 @@ class Header extends React.Component {
 
           <div className="user">
             <p data-testid="header-user-name">{result.name}</p>
-            <img src={ result.image } alt="foto de perfil" />
+            <div>
+              <img src={ result.image } alt="foto de perfil" />
+            </div>
           </div>
         </div>
 
