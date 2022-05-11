@@ -79,44 +79,49 @@ class UserEdit extends React.Component {
       <div>
         {loading ? <p className="loadingFav">Carregando...</p>
           : (
-            <div>
-              <img data-testid="profile-image" src={ image } alt="profile" />
-              <input
-                type="text"
-                data-testid="edit-input-name"
-                value={ name }
-                name="name"
-                onInput={ this.handleInput }
-              />
-              <input
-                type="text"
-                data-testid="edit-input-email"
-                value={ email }
-                name="email"
-                onInput={ this.handleInput }
-              />
-              <input
-                type="text"
-                data-testid="edit-input-description"
-                value={ description }
-                name="description"
-                onInput={ this.handleInput }
-              />
-              <input
-                type="text"
-                data-testid="edit-input-image"
-                value={ image }
-                name="image"
-                onInput={ this.handleInput }
-              />
-              <button
-                type="button"
-                onClick={ this.handleClick }
-                disabled={ disabled }
-                data-testid="edit-button-save"
-              >
-                Enviar
-              </button>
+            <div className="centerUser">
+              <div className="userPage">
+                <img data-testid="profile-image" src={ image } alt="profile" />
+                <input
+                  type="text"
+                  data-testid="edit-input-name"
+                  value={ name }
+                  name="name"
+                  onInput={ this.handleInput }
+                  maxLength="20"
+                />
+                <input
+                  type="text"
+                  data-testid="edit-input-email"
+                  value={ email }
+                  name="email"
+                  maxLength="50"
+                  onInput={ this.handleInput }
+                />
+                <input
+                  type="text"
+                  data-testid="edit-input-description"
+                  value={ description }
+                  name="description"
+                  onInput={ this.handleInput }
+                  maxLength="200"
+                />
+                <input
+                  type="text"
+                  data-testid="edit-input-image"
+                  value={ image }
+                  name="image"
+                  onInput={ this.handleInput }
+                />
+                <button
+                  type="button"
+                  onClick={ this.handleClick }
+                  disabled={ disabled }
+                  data-testid="edit-button-save"
+                >
+                  Enviar
+                </button>
+              </div>
             </div>
           )}
       </div>

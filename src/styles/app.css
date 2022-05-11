@@ -465,6 +465,18 @@ html {
   width: 150px;
   max-width: 150px;
   border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.userPage p {
+  margin-bottom: 15px;
+  width: 300px;
+  text-align: center;
+  word-break: break-all;
+}
+
+.userPage input {
+  margin-bottom: 15px;
 }
 
 .userPage button {
