@@ -1,10 +1,10 @@
-![Tryunfo (Super Clube)](src/images/vasco.gif)
+![Tryunfo (Super Clube)](images/ezgif.com-gif-maker.gif)
 
 # Trybetunes
 
 Projeto feito enquanto estudava na [Trybe](https://www.betrybe.com/), utilizando React, Class Components, Javascript e SaSS no módulo de front-end. Entregue com 100% dos requisitos.
 
-## Instalando o Trybetunes
+## Instalando o Trybetunes 
 
 Clone o repositório:
 ```
@@ -22,7 +22,6 @@ Inicie a aplicação:
 ```
 npm start
 ```
-
 
 ## Direitos autorais
 
