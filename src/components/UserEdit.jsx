@@ -77,7 +77,7 @@ class UserEdit extends React.Component {
     const { loading, name, description, email, image, disabled } = this.state;
     return (
       <div>
-        {loading ? <p>Carregando...</p>
+        {loading ? <p className="loadingFav">Carregando...</p>
           : (
             <div>
               <img data-testid="profile-image" src={ image } alt="profile" />

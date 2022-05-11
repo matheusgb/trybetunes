@@ -38,19 +38,21 @@ class User extends React.Component {
     const { loading, user } = this.state;
     return (
       <div>
-        {loading ? <p>Carregando...</p>
+        {loading ? <p className="loadingFav">Carregando...</p>
           : (
-            <div>
-              <img data-testid="profile-image" src={ user.image } alt="profile" />
-              <p>{user.name}</p>
-              <p>{user.email}</p>
-              <p>{user.description}</p>
-              <button
-                type="button"
-                onClick={ (this.handleClick) }
-              >
-                Editar perfil
-              </button>
+            <div className="centerUser">
+              <div className="userPage">
+                <img data-testid="profile-image" src={ user.image } alt="profile" />
+                <p>{user.name}</p>
+                <p>{user.email}</p>
+                <p>{user.description}</p>
+                <button
+                  type="button"
+                  onClick={ (this.handleClick) }
+                >
+                  Editar perfil
+                </button>
+              </div>
             </div>
           )}
       </div>
