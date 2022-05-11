@@ -56,7 +56,7 @@ class Login extends React.Component {
     const { disable, input, loading, waiting } = this.state;
 
     if (loading === true) {
-      return <p className="loading">Carregando...</p>;
+      return <p className="loadingFav">Carregando...</p>;
     } if (waiting === 'OK' && loading === false) {
       return <Redirect to="/search" />;
     }

@@ -289,6 +289,10 @@ html {
   margin-top: -90px;
 }
 
+.page button {
+  font-family: 'Epilogue';
+}
+
 .login {
   margin-top: 40px;
   background-color: white;
