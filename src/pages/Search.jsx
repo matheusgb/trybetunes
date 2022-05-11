@@ -63,7 +63,7 @@ class Search extends React.Component {
       return (
         <>
           <Header />
-          <p className="loading">Carregando...</p>
+          <p className="loadingFav">Carregando...</p>
         </>
       );
     }

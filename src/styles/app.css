@@ -41,7 +41,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 40px;
+  height: 30px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
@@ -53,8 +53,8 @@ html {
 }
 
 .user div {
-  width: 35px;
-  height: 35px;
+  width: 15px;
+  height: 15px;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,7 +68,7 @@ html {
 }
 
 .user div img {
-  height: 35px;
+  height: 15px;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
       align-self: end;
@@ -77,9 +77,9 @@ html {
 }
 
 .loading {
-  height: 40px;
+  height: 30px;
   background-color: white;
-  padding: 0 30px;
+  padding: 0 25px;
   border-radius: 50px;
   font-family: 'Epilogue';
 }
@@ -142,6 +142,7 @@ html {
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   cursor: pointer;
+  font-family: 'Epilogue';
 }
 
 .search button:disabled {
@@ -218,6 +219,22 @@ html {
   background-color: white;
   -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 170px;
+}
+
+.card p {
+  font-family: 'Epilogue';
+  margin-top: 5px;
+  width: 270px;
+  text-align: center;
+}
+
+.card p:last-child {
+  border-top: #d1d4d3 solid 1px;
+  padding-top: 5px;
 }
 
 .card div {
@@ -324,5 +341,85 @@ html {
   cursor: default;
   background: #7d8a85;
   color: #d1d4d3;
+}
+
+.favorites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.columnMusic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.tudo {
+  border: solid lightgrey 1px;
+  border-radius: 3px;
+  padding: 5px;
+  width: 500px;
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tudo label {
+  font-family: 'Epilogue';
+  margin-left: 10px;
+}
+
+.tudo p {
+  font-family: 'Epilogue';
+  margin-bottom: 15px;
+}
+
+.musica {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.loadingFav {
+  text-align: center;
+  height: 30px;
+  margin-top: 20px;
+  padding: 0 25px;
+  border-radius: 50px;
+  font-family: 'Epilogue';
 }
 /*# sourceMappingURL=app.css.map */

@@ -26,7 +26,7 @@ html
   display: flex
   width: fit-content
   align-items: center
-  height: 40px
+  height: 30px
   flex-direction: row-reverse
   background-color: white
   padding: 0 15px
@@ -34,8 +34,8 @@ html
   font-family: 'Epilogue'
 
   div
-    width: 35px
-    height: 35px
+    width: 15px
+    height: 15px
     margin-right: 10px  
     display: flex
     justify-content: center
@@ -44,14 +44,14 @@ html
     overflow: hidden
 
     img
-      height: 35px
+      height: 15px
       align-self: end
       object-fit: cover
 
 .loading 
-  height: 40px
+  height: 30px
   background-color: white
-  padding: 0 30px
+  padding: 0 25px
   border-radius: 50px
   font-family: 'Epilogue'
 
@@ -99,6 +99,7 @@ html
     border-top-right-radius: 3px
     border-bottom-right-radius: 3px
     cursor: pointer
+    font-family: 'Epilogue'
 
     &:disabled
       background: #7d8a85
@@ -147,6 +148,19 @@ html
   background-color: white
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.06), 0px 1px 3px rgba(0, 0, 0, 0.1);
 
+  img
+    width: 170px
+
+  p
+    font-family: 'Epilogue'
+    margin-top: 5px
+    width: 270px
+    text-align: center
+    
+    &:last-child
+      border-top:#d1d4d3 solid 1px
+      padding-top: 5px
+
   div
     display: flex
     flex-direction: column
@@ -167,7 +181,6 @@ html
         border-top:#d1d4d3 solid 1px
         padding-top: 5px
         height: fit-content
-
 
 .page
   height: 100vh
@@ -213,5 +226,47 @@ html
       background: #7d8a85
       color: #d1d4d3
 
+.favorites
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
 
+.columnMusic
+  display: flex
+  justify-content: center
+
+.tudo
+  border: solid lightgrey 1px
+  border-radius: 3px
+  padding: 5px
+  width: 500px
+  margin-top: 20px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  label
+    font-family: 'Epilogue'
+    margin-left: 10px
+
+  p
+    font-family: 'Epilogue'
+    margin-bottom: 15px
+
+.musica
+  display: flex
+  align-items: center
+
+.flexCard
+  display: flex
+  justify-content: center
+
+.loadingFav
+  text-align: center
+  height: 30px
+  margin-top: 20px
+  padding: 0 25px
+  border-radius: 50px
+  font-family: 'Epilogue'
 

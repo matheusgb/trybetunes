@@ -40,35 +40,39 @@ class Album extends React.Component {
       return (
         <>
           <Header />
-          <p>Carregando...</p>
+          <p className="loadingFav">Carregando...</p>
         </>
       );
     }
     return (
       <div data-testid="page-album">
         <Header />
-        {musicObj
-          .filter((el) => (el.kind !== 'song' && el))
-          .map((el) => (
-            <div key={ el.artworkUrl100 }>
-              <img src={ el.artworkUrl100 } alt={ el.collectionName } />
-              <p data-testid="artist-name">{el.artistName}</p>
-              <p data-testid="album-name">{el.collectionName}</p>
+        <div className="flexAll">
+          {musicObj
+            .filter((el) => (el.kind !== 'song' && el))
+            .map((el) => (
+              <div key={ el.artworkUrl100 } className="flexCard">
+                <div className="card">
+                  <img src={ el.artworkUrl100 } alt={ el.collectionName } />
+                  <p data-testid="artist-name">{el.artistName}</p>
+                  <p data-testid="album-name">{el.collectionName}</p>
 
-            </div>
-          ))}
+                </div>
+              </div>
+            ))}
 
-        {musicObj
-          .filter((el) => (el.kind === 'song' && el))
-          .map((el) => (
-            <MusicCard
-              key={ el.trackName }
-              musicObj={ musicObj }
-              trackName={ el.trackName }
-              trackId={ el.trackId }
-              previewUrl={ el.previewUrl }
-            />
-          ))}
+          {musicObj
+            .filter((el) => (el.kind === 'song' && el))
+            .map((el) => (
+              <MusicCard
+                key={ el.trackName }
+                musicObj={ musicObj }
+                trackName={ el.trackName }
+                trackId={ el.trackId }
+                previewUrl={ el.previewUrl }
+              />
+            ))}
+        </div>
       </div>
     );
   }

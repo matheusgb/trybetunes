@@ -45,18 +45,20 @@ class Favorites extends React.Component {
     return (
       <div data-testid="page-favorites">
         <Header />
-        {loading ? <p className="loading">Carregando...</p>
-          : (
-            favorites
-              .map((el) => (
-                <MusicCard
-                  key={ el.trackName }
-                  musicObj={ favorites }
-                  trackName={ el.trackName }
-                  trackId={ el.trackId }
-                  previewUrl={ el.previewUrl }
-                />
-              )))}
+        <div className="favorites">
+          {loading ? <p className="loadingFav">Carregando...</p>
+            : (
+              favorites
+                .map((el) => (
+                  <MusicCard
+                    key={ el.trackName }
+                    musicObj={ favorites }
+                    trackName={ el.trackName }
+                    trackId={ el.trackId }
+                    previewUrl={ el.previewUrl }
+                  />
+                )))}
+        </div>
       </div>
     );
   }
