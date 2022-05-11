@@ -1,4 +1,4 @@
-![Tryunfo (Super Clube)](images/ezgif.com-gif-maker.gif)
+![Trybetunes](images/ezgif.com-gif-maker.gif)
 
 # Trybetunes
 
