@@ -2,7 +2,7 @@
 
 # Trybetunes
 
-Projeto feito enquanto estudava na [Trybe](https://www.betrybe.com/), utilizando a API do iTunes, React, Class Components, Javascript e SaSS no módulo de front-end. Entregue com 100% dos requisitos.
+Projeto feito enquanto estudava na [Trybe](https://www.betrybe.com/), utilizando a API do iTunes, React, Class Components, Javascript e SaSS no módulo de front-end. Coberto com 100% dos testes da Trybe.
 
 ## Instalando o Trybetunes 
 
